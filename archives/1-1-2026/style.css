@@ -1,0 +1,56 @@
+/* General page styles */
+body {
+  background-color: black;
+  color: white;
+  font-family: 'DotGothic16', monospace;
+  text-align: center;
+  margin: 0;
+  padding: 40px 20px;
+  line-height: 1.5;
+}
+
+
+main {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+
+h1 {
+  font-family: 'VT323', monospace;
+  font-size: 3.2rem;    /* Change this to adjust the size of the main title */
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+/* Secondary heading styles */
+h2 {
+  font-family: 'VT323', monospace;
+  font-size: 1.8rem;    /* Change this to adjust the size of subheadings */
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+
+.purple {
+  color: #bc5eff; 
+}
+
+.yellow {
+  color: #efd9ff;
+}
+
+
+
+/* Paragraph text styles */
+p {
+  font-size: 1.1rem;    /* Change this to adjust paragraph text size */
+  margin-bottom: 1.2rem;
+}
+
+/* Image styling */
+img {
+  max-width: 100%;
+  height: auto;
+  margin: 2rem 0;
+}
