@@ -1,4 +1,3 @@
-/* General page styles */
 body {
   background-color: black;
   color: white;
@@ -16,15 +15,14 @@ main {
 
 h1 {
   font-family: 'VT323', monospace;
-  font-size: 3.2rem;    /* Change this to adjust the size of the main title */
+  font-size: 3.2rem;    
   margin-bottom: 2rem;
   line-height: 1.2;
 }
 
-/* Secondary heading styles */
 h2 {
   font-family: 'VT323', monospace;
-  font-size: 1.8rem;    /* Change this to adjust the size of subheadings */
+  font-size: 1.8rem;    
   margin-top: 3rem;
   margin-bottom: 1rem;
 }
@@ -37,23 +35,22 @@ h2 {
   color: #efd9ff;
 }
 
-/* Make links inside .white headings match text color and remove underline */
 .white a {
   color: white;
   text-decoration: none;
 }
 
 .white a:hover {
-  text-decoration: underline; /* optional hover effect */
+  text-decoration: underline; 
 }
 
-/* Paragraph text styles */
+
 p {
-  font-size: 1.1rem;    /* Change this to adjust paragraph text size */
+  font-size: 1.1rem;    
   margin-bottom: 1.2rem;
 }
 
-/* Image styling */
+
 img {
   max-width: 100%;
   height: auto;

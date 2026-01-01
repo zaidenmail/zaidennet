@@ -1,0 +1,129 @@
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('background.gif') no-repeat center center / cover;
+  z-index: -1;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'DotGothic16', monospace;
+  color: white;
+  background-color: black;
+  min-height: 100vh;
+  position: relative;
+}
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 900px;
+  padding: 20px 0;
+  z-index: 10;
+  text-align: center;
+}
+
+
+.title {
+  font-family: 'VT323', monospace;
+  font-weight: bold;
+  font-size: 7.7rem;
+  margin: 0;
+  color: white;
+}
+
+
+.about-link {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: white;
+  font-family: 'DotGothic16', monospace;
+  text-decoration: none;
+  font-size: 1rem;
+  border: 1px solid white;
+  padding: 5px 10px;
+  transition: 0.2s;
+  z-index: 11;
+}
+
+.about-link:hover {
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 300px;
+  z-index: 5;
+  text-align: center;
+}
+
+
+.eo-form, .eo-form * {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  right: auto !important;
+  margin: 0 auto !important;
+  display: block !important;
+  text-align: center !important;
+}
+
+
+.eo-form input[type="email"] {
+  background-color: black;
+  color: white;
+  border: 2px solid #bc5eff;
+  font-family: 'DotGothic16', monospace;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+  width: 250px;
+}
+
+
+.eo-form input[type="submit"] {
+  background-color: #bc5eff;
+  color: black;
+  font-family: 'DotGothic16', monospace;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  border: 2px solid #bc5eff;
+  cursor: pointer;
+}
+
+.eo-form input[type="submit"]:hover {
+  background-color: black;
+  color: #bc5eff;
+}
+
+
+@media (max-width: 700px) {
+  .title {
+    font-size: 4rem;
+  }
+
+  .form-container {
+    margin-top: 200px;
+  }
+
+  .eo-form input[type="email"] {
+    width: 180px;
+  }
+}
