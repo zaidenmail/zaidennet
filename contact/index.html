@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>contact me</title>
+  <link rel="icon" type="image/png" sizes="256x256" href="favicon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Inter", sans-serif;
+      color: #e6e6e6;
+      background: #0e0e0e;
+      letter-spacing: 0.02em;
+      overflow-x: hidden;
+      position: relative;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url("background.png");
+      background-size: cover;
+      background-position: center;
+      filter: blur(30px) brightness(0.45) saturate(0.85);
+      transform: scale(1.2);
+      opacity: 0.65;
+      z-index: -1;
+    }
+
+    .top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(15, 15, 15, 0.8);
+      display: flex;
+      justify-content: flex-end;
+      padding: 12px 40px;
+      gap: 30px;
+      z-index: 50;
+    }
+
+    .top-bar a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      font-size: 0.9rem;
+      transition: 0.2s;
+    }
+
+    .top-bar a:hover {
+      color: #ccc;
+    }
+
+    .contact-container {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
+    h1 {
+      font-weight: 200;
+      letter-spacing: 0.4em;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+
+    .email {
+      font-weight: 300;
+      font-size: 1.1rem;
+      color: #cfcfcf;
+      letter-spacing: 0.02em;
+      word-break: break-word;
+    }
+
+    .email a {
+      color: #cfcfcf;
+      text-decoration: none;
+      border-bottom: 1px solid #cfcfcf;
+      padding-bottom: 2px;
+      transition: 0.2s;
+    }
+
+    .email a:hover {
+      color: #fff;
+      border-color: #fff;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 80px 15px;
+      }
+
+      h1 {
+        font-size: 1.2rem;
+        letter-spacing: 0.3em;
+      }
+
+      .email {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT ME</a>
+  </div>
+
+  <div class="contact-container">
+    <h1>CONTACT</h1>
+    <div class="email">
+      <a href="mailto:businesszaiden@gmail.com">businesszaiden@gmail.com</a>
+    </div>
+  </div>
+</body>
+</html>

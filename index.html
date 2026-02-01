@@ -1,37 +1,268 @@
 <!DOCTYPE html>
-
-
 <html lang="en">
 <link rel="icon" type="image/png" sizes="256x256" href="favicon.png">
-
 <head>
   <meta charset="UTF-8">
-  <title>ZAIDEN.NET</title>
+  <title>zaiden.net</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&display=swap" rel="stylesheet">
+  <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <!-- Pixel fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=VT323&display=swap" rel="stylesheet">
+body {
+  font-family: "Inter", sans-serif;
+  color: #e6e6e6;
+  background: #0e0e0e;
+  letter-spacing: 0.02em;
+  overflow-x: hidden;
+  position: relative;
+}
 
-  <link rel="stylesheet" href="style.css">
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("background.png");
+  background-size: cover;
+  background-position: center;
+  filter: blur(30px) brightness(0.45) saturate(0.85);
+  transform: scale(1.2);
+  opacity: 0.65;
+  z-index: -1;
+}
+
+#lenis-wrapper {
+  width: 100%;
+  overflow: visible;
+}
+
+.hero {
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.hero-inner {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 5%;
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: 140px;
+  align-items: center;
+  transform: translateY(-24px);
+}
+
+.hero-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-weight: 200;
+  letter-spacing: 0.4em;
+  font-size: 0.9rem;
+  margin-bottom: 32px;
+  will-change: transform;
+}
+
+.hero-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background-image: url("hero.png");
+  background-size: cover;
+  background-position: center;
+  border-radius: 0px;
+  will-change: transform;
+}
+
+.hero-right p {
+  max-width: 520px;
+  font-weight: 300;
+  line-height: 1.7;
+  color: #cfcfcf;
+  margin-bottom: 28px;
+}
+
+.view-newest {
+  display: inline-block;
+  margin-top: 32px;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 2px;
+  transition: 0.2s;
+}
+
+.view-newest:hover {
+  color: #ccc;
+  border-color: #ccc;
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(15, 15, 15, 0.8);
+  display: flex;
+  justify-content: flex-end;
+  padding: 12px 40px;
+  gap: 30px;
+  z-index: 50;
+}
+
+.top-bar a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  font-size: 0.9rem;
+  transition: 0.2s;
+}
+
+.top-bar a:hover {
+  color: #ccc;
+}
+
+.gallery {
+  max-width: 100%;
+  margin: -60px auto 0;
+  padding: 0 2% 200px;
+  overflow: hidden;
+}
+
+.gallery-item {
+  float: left;
+  width: 32%;
+  margin-right: 2%;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.gallery-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.gallery-item .label {
+  display: block;
+  font-weight: 400;
+  font-size: 0.9rem;
+  letter-spacing: 0.2em;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.gallery-item .media {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 2px;
+}
+
+@media (max-width: 1000px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 72px;
+  }
+  .gallery-item { width: 48%; margin-right: 4%; }
+  .gallery-item:nth-child(2n) { margin-right: 0; }
+}
+
+@media (max-width: 600px) {
+  .gallery-item { width: 100%; margin-right: 0; }
+  .top-bar { padding: 12px 20px; gap: 15px; }
+}
+  </style>
 </head>
 <body>
-  <!-- Background GIF -->
-  <div class="background"></div>
-
-  <!-- About Me link (points to folder) -->
-  <a href="/about/" class="about-link">About Me</a>
-
-  <!-- Header at top -->
-  <header>
-    <h1 class="title">ZAIDEN.NET</h1>
-  </header>
-
-  <!-- Menu boxes wrapper centered vertically -->
-  <div class="menu-wrapper">
-    <nav class="menu">
-      <a href="/newsletter/" class="menu-item">Read The Newest Newsletter</a>
-      <a href="/signup/" class="menu-item">Sign Up for Newsletter Mailing List</a>
-      <a href="/archives/" class="menu-item">Newsletter Archives</a>
-    </nav>
+  <div class="top-bar">
+    <a href="#more-info">MORE INFO</a>
+    <a href="#contact">CONTACT</a>
   </div>
+  <div id="lenis-wrapper">
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-left">
+          <h1 class="name">ZAIDEN</h1>
+          <div class="hero-photo"></div>
+          <a href="#gallery" class="view-newest">VIEW NEWEST WORK</a>
+        </div>
+        <div class="hero-right">
+          <p>
+            I’m a cinematographer with a love for vintage lenses and focusing on having character in my work, and am against the bland look of most high budget films recently.
+          </p>
+          <p>
+            Most of my experience has been solo as a Director, Editor, Writer, and Cinematographer. I have my hand in all baskets of the filmmaking process.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" id="gallery">
+      <div class="gallery-item">
+        <span class="label">AYLA & SAM'S WEDDING</span>
+        <img class="media" src="1.png" alt="1">
+      </div>
+      <div class="gallery-item">
+        <span class="label">THE MISSING BARTENDER</span>
+        <img class="media" src="2.png" alt="2">
+      </div>
+      <div class="gallery-item">
+        <span class="label">OUTERBANKS</span>
+        <img class="media" src="3.png" alt="3">
+      </div>
+      <div class="gallery-item">
+        <span class="label">GIRAFFE - MUSIC VIDEO</span>
+        <img class="media" src="4.png" alt="4">
+      </div>
+      <div class="gallery-item">
+        <span class="label">SNOWED IN</span>
+        <img class="media" src="5.png" alt="5">
+      </div>
+      <div class="gallery-item">
+        <span class="label">RAIN</span>
+        <img class="media" src="6.png" alt="6">
+      </div>
+    </section>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
+  <script>
+    const lenis = new Lenis({
+      wrapper: document.getElementById('lenis-wrapper'),
+      content: document.body,
+      duration: 8.6,
+      easing: t => 1 - Math.pow(1 - t, 3.5),
+      smoothWheel: true,
+      smoothTouch: false
+    });
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf);
+
+    const heroPhoto = document.querySelector('.hero-photo');
+    const heroName = document.querySelector('.name');
+    const gallery = document.querySelector('.gallery');
+
+    lenis.on('scroll', ({ scroll }) => {
+      heroPhoto.style.transform = `translateY(${scroll * 0.05}px)`;
+      heroName.style.transform = `translateY(${scroll * 0.02}px)`;
+      gallery.style.transform = `translateY(${scroll * 0.03}px)`;
+    });
+  </script>
 </body>
 </html>
