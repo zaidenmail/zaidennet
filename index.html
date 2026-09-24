@@ -1,0 +1,119 @@
+<head>
+  <meta charset="utf-8">
+  <title>zaidenambry</title>
+  <link rel="icon" type="image/png" href="bird.png">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #000;
+      color: #fff;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-family: "Press Start 2P", monospace;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    h1 {
+      margin: 0 0 35px;
+      font-size: 42px;
+      line-height: 1.3;
+    }
+
+    h1 a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    h1 a:hover {
+      color: #8000ff;
+    }
+
+    .links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .links a {
+      display: block;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .links img {
+      width: 38px;
+      height: 38px;
+      image-rendering: pixelated;
+      transition: transform 0.1s, opacity 0.1s;
+    }
+
+    .links a:hover img {
+      transform: scale(1.15);
+      opacity: 0.7;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 27px;
+      }
+
+      .links {
+        gap: 18px;
+      }
+
+      .links img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+
+    <h1>
+      <a href="more.html">zaidenambry</a>
+    </h1>
+
+    <div class="links">
+
+      <a href="https://bsky.app/profile/zaidenambry.bsky.social" aria-label="Bluesky">
+        <img src="https://cdn.simpleicons.org/bluesky/ffffff" alt="Bluesky">
+      </a>
+
+      <a href="https://zaidenambry.bandcamp.com/" aria-label="Bandcamp">
+        <img src="https://cdn.simpleicons.org/bandcamp/ffffff" alt="Bandcamp">
+      </a>
+
+      <a href="https://www.youtube.com/@zaidenambry-music" aria-label="YouTube">
+        <img src="https://cdn.simpleicons.org/youtube/ffffff" alt="YouTube">
+      </a>
+
+      <a href="spotify.html" aria-label="Spotify">
+        <img src="https://cdn.simpleicons.org/spotify/ffffff" alt="Spotify">
+      </a>
+
+    </div>
+
+  </main>
+
+</body>
+</html>
